@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_repeat"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/odslon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:text="OPEN"
+        app:layout_constraintBottom_toTopOf="@+id/odslaniaj"
+        app:layout_constraintEnd_toStartOf="@+id/zaslon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="25dp" />
+
+    <Button
+        android:id="@+id/zaslon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:text="CLOSE"
+        app:layout_constraintBottom_toBottomOf="@+id/odslon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/odslon"
+        app:layout_constraintTop_toTopOf="@+id/odslon"
+        android:layout_marginLeft="25dp" />
+
+    <Button
+        android:id="@+id/odslaniaj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:text="HOLD TO OPEN"
+        app:layout_constraintEnd_toStartOf="@+id/zaslaniaj"
+        app:layout_constraintStart_toStartOf="@+id/odslon"
+        app:layout_constraintTop_toBottomOf="@+id/odslon" />
+
+    <Button
+        android:id="@+id/zaslaniaj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="HOLD TO CLOSE"
+        app:layout_constraintBottom_toBottomOf="@+id/odslaniaj"
+        app:layout_constraintEnd_toEndOf="@+id/zaslon"
+        app:layout_constraintStart_toEndOf="@+id/odslaniaj"
+        app:layout_constraintTop_toTopOf="@+id/odslaniaj" />
+
+    <EditText
+        android:id="@+id/ip"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="100"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/ip2"
+        app:layout_constraintEnd_toEndOf="@+id/zaslaniaj"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/ip2" />
+
+    <EditText
+        android:id="@+id/ip2"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/ip3"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/ip3" />
+
+    <EditText
+        android:id="@+id/ip4"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="192"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/odslaniaj"
+        app:layout_constraintTop_toBottomOf="@+id/odslaniaj" />
+
+    <EditText
+        android:id="@+id/ip3"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="168"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/ip4"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/ip4" />
+
+    <WebView
+        android:id="@+id/webViewer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="@+id/ip3"
+        app:layout_constraintEnd_toStartOf="@+id/ip2"
+        app:layout_constraintStart_toEndOf="@+id/ip3" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="@+id/ip4"
+        app:layout_constraintEnd_toStartOf="@+id/ip3"
+        app:layout_constraintStart_toEndOf="@+id/ip4" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="@+id/ip2"
+        app:layout_constraintEnd_toStartOf="@+id/ip"
+        app:layout_constraintStart_toEndOf="@+id/ip2" />
+
+    <Button
+        android:id="@+id/connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="CONNECT"
+        app:layout_constraintEnd_toEndOf="@+id/ip"
+        app:layout_constraintStart_toStartOf="@+id/ip4"
+        app:layout_constraintTop_toBottomOf="@+id/ip2" />
+
+</android.support.constraint.ConstraintLayout>
